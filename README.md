@@ -2,6 +2,10 @@
 
 I have NOT written all scripts from this repo.
 
+## display.sh
+
+changing screen resolution to 1920x1080 if there's any screen connected using HDMI and to 1024x600 when it can't find any connected using HDMI
+
 ### fortune.sh
 
 displays random fortune
