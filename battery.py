@@ -1,6 +1,8 @@
 # power management
 # author: maciej plonski / mplonski / sokoli.pl
 #
+# LINUX ONLY!
+#
 # script is asking you about every loaded kernel module
 # if you choose 1, 2 or 3 it's adding module (you've been
 # asked about) to the list

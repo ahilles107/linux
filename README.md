@@ -14,6 +14,10 @@ downloads Polish subtitles for a movie (from napiprojekt)
 
 executing shutdown when battery is charged in 95%
 
+### battery.py
+
+asking about every loaded kernel module and creating .sh files unloading selected modules
+
 ### mt.cpp
 
 turing machine (comments only in Polish)
