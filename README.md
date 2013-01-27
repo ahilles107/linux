@@ -14,6 +14,10 @@ displays random fortune
 
 downloads Polish subtitles for a movie (from napiprojekt)
 
+### [testsub.py](https://github.com/mplonski/testsub)
+
+tests subtitles and repairs it (e.g. if there is {0}{10} and next {8}{20}) [click](https://github.com/mplonski/testsub)
+
 ### shutdown-battery.py
 
 executing shutdown when battery is charged in 95%
