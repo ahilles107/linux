@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# you need to install packages `cowsay` and `fortune` (debian/ubuntu)
+
 function show_fortune {
 	RANGE=3
 	number=$RANDOM
