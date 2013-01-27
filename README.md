@@ -24,5 +24,5 @@ turing machine (comments only in Polish)
 
 ### check3g.sh
 
-showing ppp0 stats using Unity framework [website](http://opensource.ksx4system.net/ubuntu/check3g/)
+showing ppp0 stats using Unity framework ([author's website](http://opensource.ksx4system.net/ubuntu/check3g/))
 
