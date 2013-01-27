@@ -1,5 +1,8 @@
 #!/usr/bin/python
-#
+
+# author: maciej plonski / mplonski / sokoli.pl
+# licence: GNU GPL
+
 # script's executing shutdown when battery is chardged in > 95%
 # usage // add script to root's cron
 

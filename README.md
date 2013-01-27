@@ -1,4 +1,4 @@
-# (not only) linux useful scripts
+# ((not only) linux) useful scripts
 
 I have NOT written all scripts from this repo.
 

@@ -1,3 +1,4 @@
+// author: maciej plonski / mplonski / sokoli.pl
 // maszyna turinga
 // sorry, comments only in Polish
 #include <iostream>
