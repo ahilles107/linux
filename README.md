@@ -4,7 +4,7 @@
 
 * displays random fortune
 
-###  napi.py
+###  napiprojekt.py
 
 * downloads Polish subtitles for a movie (from napiprojekt)
 
