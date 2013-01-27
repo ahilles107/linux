@@ -1,14 +1,16 @@
 # linux useful scripts
 
+I have NOT written all scripts from this repo.
+
 ### fortune.sh
 
-* displays random fortune
+displays random fortune
 
 ###  napiprojekt.py
 
-* downloads Polish subtitles for a movie (from napiprojekt)
+downloads Polish subtitles for a movie (from napiprojekt)
 
 ### shutdown-battery.py
 
-* executing shutdown when battery is charged in 95%
+executing shutdown when battery is charged in 95%
 
