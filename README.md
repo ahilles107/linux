@@ -22,3 +22,7 @@ asking about every loaded kernel module and creating .sh files unloading selecte
 
 turing machine (comments only in Polish)
 
+### check3g.sh
+
+showing ppp0 stats using Unity framework [website](http://opensource.ksx4system.net/ubuntu/check3g/)
+

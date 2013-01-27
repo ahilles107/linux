@@ -65,22 +65,22 @@ def askformodules():
 	global osz2
 	global osz3
 
-	print " Wyszukiwanie modulow...\n\n Dla kazdego modulu wybierz:\n  - 0 - nie zatrzymuj\n  - 1,2,3 - zatrzymuj dla wybranego trybu"
+	print " For each module please select:\n  - 0 - do nothing\n  - 1,2,3 - add to battery1/2/3.sh"
 	output = commands.getstatusoutput('lsmod')[1]
 	for i in range(1, len(output.split("\n"))):
 		mod = output.split("\n")[i].split(" ")[0]
 		desc, deps = modinfo(mod)
 		if deps == None:
 			deps = ""
-		odp = int(raw_input("\n\nModul " + mod + "\n Opis: " + desc + "\n Zaleznosci: " + deps + "\n Zatrzymac w trybie oszczedzania baterii? >> "))
+		odp = int(raw_input("\n\nModule: " + mod + "\n Description: " + desc + "\n Depends: " + deps + "\n Select 0,1,2,3 >> "))
 		if (odp > 0):
 			dolacz(odp, mod)
 			if (deps != ""):
 				for k in deps.split(","):
 					dolacz(odp, k)
 
-	print "moduly do usuniecia: "
-	print ("\nosz1: ")
+	print "selected modules: "
+	print ("\n1) ")
 	print osz1
 
 	posz1 = open('battery1.sh', 'w')
@@ -88,7 +88,7 @@ def askformodules():
 		posz1.write('modprobe -r ' + k + "\n")
 	posz1.close()
 
-	print "\nosz2: "
+	print "\n2) "
 	print osz2
 
 	posz2 = open('battery2.sh', 'w')
@@ -96,7 +96,7 @@ def askformodules():
 		posz2.write('modprobe -r ' + k + "\n")
 	posz2.close()
 
-	print "\nosz3 "
+	print "\n3) "
 	print osz3
 
 	posz3 = open('battery3.sh', 'w')
