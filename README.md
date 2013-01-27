@@ -14,3 +14,7 @@ downloads Polish subtitles for a movie (from napiprojekt)
 
 executing shutdown when battery is charged in 95%
 
+### mt.cpp
+
+turing machine (comments only in Polish)
+
