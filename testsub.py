@@ -1,19 +1,13 @@
 #!/usr/bin/python
-#
-# subtitles tester by maciej plonski // mplonski // sokoli.pl
-#
-# checks and fixes subtitles when there is missed time
-# e.g.: {0}{10} and then {8}{20}
-# more in --help
-#
+# subtitles tester by mplonski // sokoli.pl
 # works on subtitles only in following formats:
 # [sec][sec] sth
 # {sec}{sec} sth
 # LINUX only!
 
-from os import listdir,curdir
-from sys import argv
+from os import listdir,curdir,system
 from re import search
+from sys import argv
 
 # gets times of showing and hiding `w`
 def gettime(w):
@@ -85,7 +79,7 @@ def napitest(repair):
 		else:
 			if (repair == 1):
 				if(backup == 0):
-					os.system('cp "./' + txtfile + '" "./' + txtfile + '_old"')
+					system('cp "./' + txtfile + '" "./' + txtfile + '_old"')
 				new = open(txtfile, "w")
 				new.writelines(lines)
 				new.close()
@@ -132,6 +126,7 @@ if(len(argv) > 1):
 		elif (argv[i] == '--nobackup'):
 			backup = 1
 		elif (argv[i] == '--repair'):
+			print "OK"
 			if(len(argv) > i+1):
 				if(argv[i+1] == 'min'):
 					repair_min = 1
