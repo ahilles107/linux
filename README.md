@@ -37,3 +37,8 @@ tests subtitles and repairs it (e.g. if there is {0}{10} and next {8}{20})
 ### unload-modules.sh
 
 simple power management script, unloads unnecessary kernel modules (works with atheros & r8169)
+
+### yt.sh
+
+simple program downloading video from youtube in 720p and converting to mp3
+
