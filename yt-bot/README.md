@@ -6,6 +6,6 @@ How to use yt-bot?
 3. Correct location of yt.sh
 4. Run `setupdb.py`
 5. Run `bot.py` in the directory where mp3s are to be downloaded
-6. Run 'new.py yt_id` to add new youtube video
+6. Run `new.py yt_id` to add new youtube video
 7. wait :-)
 
