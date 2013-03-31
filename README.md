@@ -38,7 +38,9 @@ tests subtitles and repairs it (e.g. if there is {0}{10} and next {8}{20})
 
 simple power management script, unloads unnecessary kernel modules (works with atheros & r8169)
 
-### yt.sh
+### yt-bot / yt.sh
 
-simple program downloading video from youtube in 720p and converting to mp3
+yt-bot -- bot using yt.sh to set and download list of youtube videos
+
+yt.sh -- simple program downloading video from youtube in the best possible quality and converting to mp3
 
