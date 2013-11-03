@@ -17,26 +17,31 @@ try:
     html = sock.read()
     sock.close()
 except:
-    print ("Something is wrong... the Internet is not working!")
+    print ("Something is wrong... tvp.pl is not working!")
     sys.exit()
 
 p = re.compile('object_id:\'[0-9]+\'')
 k = p.search(html)
 
 if k.group() == None:
-    print ("Something is wrong... with tvp.pl website!")
+    print ("Something is wrong... with tvp.pl! (or you)")
     sys.exit()
     
 num = k.group().split('\'')[1]
 
-sock = urllib.urlopen('http://www.tvp.pl/pub/stat/videofileinfo?video_id=%s' % num)
-html = sock.read()
-sock.close()
-
 try:
+    sock = urllib.urlopen('http://www.tvp.pl/pub/stat/videofileinfo?video_id=%s' % num)
+    html = sock.read()
+    sock.close()
+
     d = json.loads(html)
 except:
-    print ("Something is wrong... with json!")
+    print ("Something is wrong... with tvp.pl!")
+    sys.exit()
+
+if not d['file_name']:
+    print ("Something is wrong... with tvp.pl!")
+    sys.exit()
 
 print ("Downloading...")
 
