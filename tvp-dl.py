@@ -49,7 +49,8 @@ if not d['file_name']:
 
 print ("Downloading...")
 
-# yes, I know, it's not the best way, but wget is very good!
+# yes, I know, it's not the best way, but wget is cool
+# if you don't like it, fork it and commit new version!
 os.system("wget %s" % d['video_url'])
 
 print ("Done! Saved to %s" % d['file_name'])
