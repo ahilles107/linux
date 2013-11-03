@@ -24,8 +24,7 @@ except:
 else:
     sock.close()
 
-p = re.compile('object_id:\'[0-9]+\'')
-k = p.search(html)
+k = re.compile('object_id:\'[0-9]+\'').search(html)
 
 if k.group() == None:
     quit("tvp-dl is outdated or url is not correct")
