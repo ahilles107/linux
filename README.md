@@ -34,6 +34,10 @@ executing shutdown when battery is charged in 95%
 
 tests subtitles and repairs it (e.g. if there is {0}{10} and next {8}{20})
 
+### tvp-dl.py
+
+downloads movies from tvp.pl, so there is no need to play with silverlight!
+
 ### unload-modules.sh
 
 simple power management script, unloads unnecessary kernel modules (works with atheros & r8169)
