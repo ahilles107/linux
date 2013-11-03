@@ -4,8 +4,8 @@
 
 import os, sys, urllib, json, re
 
-def quit(mess):
-    print (mess)
+def quit(mess=""):
+    print ("Something is wrong... " + mess)
     sys.exit()
 
 if len(sys.argv) < 2:
@@ -20,7 +20,7 @@ try:
     sock = urllib.urlopen(sys.argv[1])
     html = sock.read()
 except:
-    quit ("Something is wrong... tvp.pl is not working!")
+    quit("tvp.pl is not working")
 else:
     sock.close()
 
@@ -28,7 +28,7 @@ p = re.compile('object_id:\'[0-9]+\'')
 k = p.search(html)
 
 if k.group() == None:
-    quit ("Something is wrong... with tvp.pl! (or you)")
+    quit("tvp-dl is outdated or url is not correct")
     
 num = k.group().split('\'')[1]
 
@@ -36,17 +36,17 @@ try:
     sock = urllib.urlopen('http://www.tvp.pl/pub/stat/videofileinfo?video_id=%s' % num)
     html = sock.read()
 except:
-    quit ("Something is wrong... with tvp.pl!")
+    quit("tvp.pl is not working")
 else:
     sock.close()
 
 try:
     d = json.loads(html)
 except:
-    quit ("Something is wrong... with tvp.pl!")
+    quit("can't load json...")
 
 if not d['file_name']:
-    quit ("Something is wrong... with tvp.pl!")
+    quit("json does not contain video's url")
 
 print ("Downloading...")
 
