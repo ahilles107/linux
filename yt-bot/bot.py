@@ -12,7 +12,7 @@ while (True):
 	if not url == None:
 		c.execute("DELETE FROM yt WHERE url = '%s'" % (url))
 		conn.commit()
-		os.system("yt.sh %s" % url)
+		os.system('yt.sh "%s"' % url)
 	conn.close()
 	time.sleep(2)
 

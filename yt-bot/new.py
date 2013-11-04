@@ -3,13 +3,21 @@
 import sqlite3
 import sys
 
-if len(sys.argv) == 1:
-	print ("Usage: %s yt_id" % sys.argv[0])
-	sys.exit()
+conn = None
+url = ""
+try:
+	while not (url == "q"):
+		url = raw_input(" > ")
+		if not (url == "q"):
+			conn = sqlite3.connect('baza.db')
+			c = conn.cursor()
+			c.execute("INSERT INTO yt VALUES ('%s')" % url)
+			conn.commit()
+			conn.close()
+except:
+	pass
 
-conn = sqlite3.connect('baza.db')
-c = conn.cursor()
-c.execute("INSERT INTO yt VALUES ('%s')" % sys.argv[1])
-conn.commit()
-conn.close()
+print ""
+if (not conn == None):
+	conn.close()
 
