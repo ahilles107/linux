@@ -9,7 +9,7 @@ def quit(mess=""):
     sys.exit()
 
 if len(sys.argv) < 2:
-    print("Welcome to tvpw-dl!")
+    print("Welcome to tvp-dl!")
     print("\tUsage: %s url" % sys.argv[0])
     print("\tExample: %s http://www.tvp.pl/warszawa/magazyny/campusnews/wideo/31102013/12878238" % sys.argv[0])
     sys.exit()
